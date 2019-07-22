@@ -1,0 +1,39 @@
+﻿<Window x:Class="hw1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:hw1"
+        mc:Ignorable="d"
+        Title="Calculator" Height="450" Width="600">
+    <Grid OpacityMask="#FF7C7C7C" x:Name="mainpage">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="35*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <TextBox Name ="input_prefix" HorizontalAlignment="Left" Height="30" Margin="20,20,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="520" Background="{x:Null}" FontSize="14" BorderThickness="1,1,1,0"/>
+        <TextBox Name ="postfix" HorizontalAlignment="Left" Height="30" Margin="20,50,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="520" FontSize="14" BorderThickness="1,0"/>
+        <TextBox Name ="demical" HorizontalAlignment="Left" Height="30" Margin="20,80,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="520" BorderThickness="1,0" FontSize="14"/>
+        <TextBox Name ="binary" HorizontalAlignment="Left" Height="30" Margin="20,110,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="520" FontSize="14" BorderThickness="1,0,1,1"/>
+        <Button Name ="p1" Content="1" HorizontalAlignment="Left" Margin="18,160,0,0" VerticalAlignment="Top" Width="90" Height="35" FontSize="16" Click="P1_Click"/>
+        <Button Name ="p4" Content="4" HorizontalAlignment="Left" Margin="18,215,0,0" VerticalAlignment="Top" Width="90" Height="35" FontSize="16" Click="P4_Click"/>
+        <Button Name ="p7" Content="7" HorizontalAlignment="Left" Margin="18,270,0,0" VerticalAlignment="Top" Width="90" Height="35" FontSize="16" Click="P7_Click"/>
+        <Button Name ="p0" Content="0" HorizontalAlignment="Left" Margin="18,325,0,0" VerticalAlignment="Top" Width="90" Height="35" FontSize="16" Click="P0_Click"/>
+        <Button Name ="p2" Content="2" HorizontalAlignment="Left" Margin="126,160,0,0" VerticalAlignment="Top" Width="90" Height="35" FontSize="16" Click="P2_Click"/>
+        <Button Name ="p5" Content="5" HorizontalAlignment="Left" Margin="126,215,0,0" VerticalAlignment="Top" Width="90" Height="35" FontSize="16" Click="P5_Click"/>
+        <Button Name ="p8" Content="8" HorizontalAlignment="Left" Margin="126,270,0,0" VerticalAlignment="Top" Width="90" Height="35" FontSize="16" Click="P8_Click"/>
+        <Button Name ="backspace" Content="Backspace" HorizontalAlignment="Left" Margin="126,325,0,0" VerticalAlignment="Top" Width="90" Height="35" FontSize="15" Click="Backspace_Click"/>
+        <Button Name ="p3" Content="3" HorizontalAlignment="Left" Margin="234,160,0,0" VerticalAlignment="Top" Width="90" Height="35" FontSize="16" Click="P3_Click"/>
+        <Button Name ="p6" Content="6" HorizontalAlignment="Left" Margin="234,215,0,0" VerticalAlignment="Top" Width="90" Height="35" FontSize="16" Click="P6_Click"/>
+        <Button Name ="p9" Content="9" HorizontalAlignment="Left" Margin="234,270,0,0" VerticalAlignment="Top" Width="90" Height="35" FontSize="16" Click="P9_Click"/>
+        <Button Name ="clear" Content="Clear" HorizontalAlignment="Left" Margin="234,325,0,0" VerticalAlignment="Top" Width="90" Height="35" FontSize="15" Click="Clear_Click"/>
+        <Button Name ="pplus" Content="+" HorizontalAlignment="Left" Margin="342,160,0,0" VerticalAlignment="Top" Width="90" Height="35" FontSize="18" Click="Pplus_Click"/>
+        <Button Name ="pminus" Content="-" HorizontalAlignment="Left" Margin="342,215,0,0" VerticalAlignment="Top" Width="90" Height="35" FontSize="18" Click="Pminus_Click"/>
+        <Button Name ="pmulti" Content="*" HorizontalAlignment="Left" Margin="342,270,0,0" VerticalAlignment="Top" Width="90" Height="35" FontSize="18" Click="Pmulti_Click"/>
+        <Button Name ="pdiv" Content="/" HorizontalAlignment="Left" Margin="342,325,0,0" VerticalAlignment="Top" Width="90" Height="35" FontSize="18" Click="Pdiv_Click"/>
+        <Button Name ="pequal" Content="=" HorizontalAlignment="Left" Margin="450,270,0,0" VerticalAlignment="Top" Width="90" Height="90" FontSize="48" Click="Pequal_Click" />
+        <Button Name ="goto_datas" Content="data" HorizontalAlignment="Left" Margin="450,160,0,0" VerticalAlignment="Top" Width="90" Height="90" FontSize="18" Click="Goto_data_Click" />
+
+
+    </Grid>
+</Window>
