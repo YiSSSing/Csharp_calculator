@@ -195,17 +195,22 @@ namespace hw1
             //connect to database here
             MySqlConnection conn = new MySqlConnection(myConnectionString);
             conn.Open();
-            string compare = "SELECT infix FROM calculator WHERE infix = 'input_string'";
+            string compare = "SELECT infix FROM calculator WHERE infix = '" + input_string + "'" ;
             string query =
                 "INSERT INTO calculator(infix,prefix,postfix,ans_demical,ans_binary) VALUES('" + input_string + "','" + pre + "','" + post + "','" + s + "','" + result + "')";
 
             MySqlCommand find = new MySqlCommand(compare, conn);
             MySqlDataReader reader = find.ExecuteReader();
-            if ( ! reader.Read() && input_string != "" )
+            string com = null;
+            while ( reader.Read() ) com = reader.GetString(0);
+            reader.Close();
+            if ( input_string != "" && com != input_string )
             {
-                reader.Close();
                 MySqlCommand insert = new MySqlCommand(query, conn);
                 insert.ExecuteNonQuery();
+            }else
+            {
+                MessageBox.Show("Same expression already exist");
             }
             reader.Close();
             conn.Close();
